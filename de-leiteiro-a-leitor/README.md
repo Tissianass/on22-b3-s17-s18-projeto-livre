@@ -1,7 +1,7 @@
 # De Leiteiro a Leitor
 
 <p align="center">
-<img src="material/deleiteiroaleitor.jpg" alt="logo do projeto De Leiteiro a Leitor" width="500">
+<img src="/de-leiteiro-a-leitor/material/deleiteiroaleitor.jpg" alt="logo do projeto De Leiteiro a Leitor" width="500">
 </p> <p align="center"> </p>
 </h1></br>
 
@@ -85,7 +85,7 @@ green: Arquitetura MVC
 green: Rotas
 
                                              
-| Livros Disponíveis                              |        |                          |
+| Livros Disponíveis                              | Verbo  |  Rota                    |
 |-------------------------------------------------|--------|------------------------- |
 | Mostrar todos os livros disponíveis             | GET    | library/books/books      |
 | Filtrar livros disponíveis por ID               | GET    | library/books/books/:id  |
@@ -93,7 +93,7 @@ green: Rotas
 | Cadastrar livro para disponibilização           | POST   | library/books/books/new  |
 | Deletar livro cadastrado por ID                 | DELETE | library/books/books/:id  |
 
-| Crianças Frequentadoras              |          |                                   |
+| Crianças Frequentadoras                         | Verbo  | Rota                     |
 |--------------------------------------|--------  |-----------------------------------|
 | Mostrar todas as crianças participantes         | GET    | library/kids/kids        |
 | Filtrar crianças por nome                       | GET    | library/kids/kids/:name  |
@@ -104,10 +104,10 @@ green: Rotas
 green: Futuras implementações
 
 - Criar novas funcionalides:
-Login para usuários, Voluntários, Empréstimo de livros.
+Login para usuários, Cadastro de Voluntários, Controle de empréstimo de livros.
 
 - Fazer novos filtros
-Filtro de livros por autor, por título, por responsável, por escola etc.
+Filtro de livros por autor e criança, por título, por responsável, filtro de criança por nome, por escola etc, 
 
 
 #

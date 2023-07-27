@@ -8,9 +8,9 @@ const router = express.Router();
 // router. metodo http (rota, funcao)
 
 router.get("/kids/all", controller.getAllKids);
-router.get("/kids/:name", controller.getKidsByName);
+router.get("/kids/:id", controller.getKidsById);
 router.post("/kids/new", controller.addNewKids);
-router.patch("/kids/:name", controller.updateKidsByName);
-router.delete("/kids/:name", controller.deleteKids);
+router.patch("/kids/:id", controller.updateKidsById);
+router.delete("/kids/:id", controller.deleteKids);
 
 module.exports = router; //exporto as rotas

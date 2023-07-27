@@ -9,9 +9,9 @@ const getAllKids = async (req, res) => {
   };
 };
 
-const getKidsByName = async (req, res) => {
+const getKidsById = async (req, res) => {
   try {   
-    const findKids = await KidsModel.findByName(req.params.name);
+    const findKids = await KidsModel.findById(req.params.id);
     res.status(200).json(findKids);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -47,7 +47,7 @@ const addNewKids = async (req, res) => {
   };
 };
 
-const updateKidsByName = async (req, res) => {
+const updateKidsById = async (req, res) => {
   try {
     const {
         name,
@@ -57,8 +57,8 @@ const updateKidsByName = async (req, res) => {
         number,
         address,
     } = req.body;
-    const updateKids = await KidsModel.findByNameAndUpdate(
-      req.params.name,
+    const updateKids = await KidsModel.findByIdAndUpdate(
+      req.params.id,
       {
       name,
       birth,
@@ -77,14 +77,14 @@ const updateKidsByName = async (req, res) => {
 
 const deleteKids = async (req, res) => {
   try {
-    const { name } = req.params;
-    const findKids = await KidsModel.findByName(name);
+    const { id } = req.params;
+    const findKids = await KidsModel.findById(id);
 
     if (findKids == null) {
-      return res.status(404).json({ message: `Kids with name ${name} not found` })
+      return res.status(404).json({ message: `Kids with name ${id} not found` })
     };
     await findKids.remove();
-    res.status(200).json({ message: `Kids with name ${name} was successfully deleted` });
+    res.status(200).json({ message: `Kids with name ${id} was successfully deleted` });
   } catch (error) {
     res.status(500).json({ message: error.message });
   };
@@ -92,8 +92,8 @@ const deleteKids = async (req, res) => {
 
 module.exports = {
   getAllKids,
-  getKidsByName,
+  getKidsById,
   addNewKids,
-  updateKidsByName,
+  updateKidsById,
   deleteKids,
 };
