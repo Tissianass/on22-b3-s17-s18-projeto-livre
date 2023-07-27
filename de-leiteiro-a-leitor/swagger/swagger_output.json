@@ -174,12 +174,12 @@
         }
       }
     },
-    "/library/kids/kids/{id}": {
+    "/library/kids/kids/{name}": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "name",
             "in": "path",
             "required": true,
             "type": "string"
@@ -194,33 +194,15 @@
           }
         }
       },
-      "delete": {
+      "patch": {
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "name",
             "in": "path",
             "required": true,
             "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
           },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/library/kids/kids/new": {
-      "post": {
-        "description": "",
-        "parameters": [
           {
             "name": "body",
             "in": "body",
@@ -257,18 +239,34 @@
             "description": "Internal Server Error"
           }
         }
-      }
-    },
-    "/library/kids/patch/{id}": {
-      "patch": {
+      },
+      "delete": {
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "name",
             "in": "path",
             "required": true,
             "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/library/kids/kids/new": {
+      "post": {
+        "description": "",
+        "parameters": [
           {
             "name": "body",
             "in": "body",

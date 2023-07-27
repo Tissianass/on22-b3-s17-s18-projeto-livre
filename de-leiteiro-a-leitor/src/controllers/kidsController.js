@@ -1,4 +1,4 @@
-const KidsModel = require("../models/booksModel");
+const KidsModel = require("../models/kidsModel");
 
 const getAllKids = async (req, res) => {
   try {
@@ -9,10 +9,10 @@ const getAllKids = async (req, res) => {
   };
 };
 
-const getKidsById = async (req, res) => {
+const getKidsByName = async (req, res) => {
   try {   
-    const findKids = await KidsModel.findById(req.params.id);
-    res.status(200).json(findBook);
+    const findKids = await KidsModel.findByName(req.params.name);
+    res.status(200).json(findKids);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -47,7 +47,7 @@ const addNewKids = async (req, res) => {
   };
 };
 
-const updateKidsById = async (req, res) => {
+const updateKidsByName = async (req, res) => {
   try {
     const {
         name,
@@ -57,8 +57,8 @@ const updateKidsById = async (req, res) => {
         number,
         address,
     } = req.body;
-    const updateKids = await KidsModel.findByIdAndUpdate(
-      req.params.id,
+    const updateKids = await KidsModel.findByNameAndUpdate(
+      req.params.name,
       {
       name,
       birth,
@@ -77,14 +77,14 @@ const updateKidsById = async (req, res) => {
 
 const deleteKids = async (req, res) => {
   try {
-    const { id } = req.params;
-    const findKids = await KidsModel.findById(id);
+    const { name } = req.params;
+    const findKids = await KidsModel.findByName(name);
 
     if (findKids == null) {
-      return res.status(404).json({ message: `Kids with id ${id} not found` })
+      return res.status(404).json({ message: `Kids with name ${name} not found` })
     };
     await findKids.remove();
-    res.status(200).json({ message: `Kids with id ${id} was successfully deleted` });
+    res.status(200).json({ message: `Kids with name ${name} was successfully deleted` });
   } catch (error) {
     res.status(500).json({ message: error.message });
   };
@@ -92,8 +92,8 @@ const deleteKids = async (req, res) => {
 
 module.exports = {
   getAllKids,
-  getKidsById,
+  getKidsByName,
   addNewKids,
-  updateKidsById,
+  updateKidsByName,
   deleteKids,
 };
