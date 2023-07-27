@@ -174,12 +174,12 @@
         }
       }
     },
-    "/library/kids/kids/{name}": {
+    "/library/kids/kids/{id}": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "name",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -198,7 +198,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "name",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -244,7 +244,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "name",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
