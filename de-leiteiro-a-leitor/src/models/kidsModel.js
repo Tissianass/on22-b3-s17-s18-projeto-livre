@@ -14,7 +14,7 @@ const KidsSchema = new mongoose.Schema(
             unique: true
         },
         birth: {
-            type: Date,
+            type: String,
             required: true, 
         },
         school: {

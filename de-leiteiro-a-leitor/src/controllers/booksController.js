@@ -79,7 +79,7 @@ const updateBookById = async (req, res) => {
 }
 };
 
-const deleteBook = async (req, res) => {
+/* const deleteBook = async (req, res) => {
   try {
     const { id } = req.params;
     const findBooks = await BooksModel.findById(id);
@@ -92,7 +92,23 @@ const deleteBook = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: error.message });
   };
+}; */
+
+const deleteBook = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedBook = await BooksModel.findOneAndDelete({ _id: id });
+
+    if (!deletedBook) {
+      return res.status(404).json({ message: `Book with id ${id} not found` });
+    }
+
+    res.status(200).json({ message: `Book with id ${id} was successfully deleted` });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 };
+
 
 module.exports = {
   getAllBooks,
