@@ -1,7 +1,7 @@
 # De Leiteiro a Leitor
 
 <p align="center">
-<img src="/de-leiteiro-a-leitor/material/deleiteiroaleitor.jpg" alt="logo do projeto De Leiteiro a Leitor" width="500">
+<img src="/de-leiteiro-a-leitor/material/deleiteiroaleitor.jpg" alt="logo do projeto De Leiteiro a Leitor" width="200">
 </p> <p align="center"> </p>
 </h1></br>
 
@@ -15,20 +15,20 @@ Projeto de conclusão do bootcamp de desenvolvimento Back-end da [{reprograma}](
 
 - Documentação disponível [neste link](https://de-leiteiro-a-leitor.onrender.com/minha-rota-de-documentacao/#/)
 - Aplicação disponível [neste link](https://de-leiteiro-a-leitor.onrender.com/)
-- Slides da apresentação disponíveis [neste link](XXXXXXXXX)
 
 green: Objetivos
 
-XXXXXXXXXXX **INCENTIVO À LEITURA**.
+Espaço de aproximação e de experiências de crianças com o livro e a leitura.
 
-XXXXXXX **DESCONCENTRAÇÃO DO CIRCUITO CULTURAL**.
+Divulgação de informações de arte e de  cultura.
 
-XXXXXXXXX. **ESTÍMULO À MUDANÇA DE VISÃO DO BAIRRO**
+Desconcentração do circuito sociocultural na cidade.
 
-XXXXXXXXX. **AMBIENTE DE APOIO ÀS MÃES**
+Estímulo à mudança da estigmatização do bairro, como local de lixão.
 
-Esse projeto une minhas formações profissionais, Ciências Econômicas e Pedagogia, e minha própria experiência pessoal, como moradora de periferia, que, diariamente, observa e passa pelos "corres" de xxxxx, e como mãe, que XXXXX. XXXXXXXXXXXXXXX
-O título do projeto é em homenagem ao meu filho, Rudá, hoje com 5 anos, que sempre foi muito apaixnado por "leitinho" e livrinhos, e ganhou esse apelido cedo, quando foi gradativamente se tornando um leitor (o leitinho ele ainda toma, rs!)
+Ambiente de apoio às mães.
+
+Esse projeto une minhas formações profissionais, em Ciências Econômicas e Pedagogia, e minha própria experiência pessoal, como moradora de periferia, que, diariamente, observa e passa pelos "corres" da área, e como mãe, que busca uma parentalidade positiva. O título do projeto é em homenagem ao meu filho, Rudá, hoje com 5 anos, que sempre foi muito apaixonado por "leitinho" e livrinhos, que tanto nos aproximaram, e ganhou esse apelido cedo, quando foi gradativamente se tornando um leitor (o leitinho ele ainda toma, rs!)
 
 green: Funcionalidades
 
